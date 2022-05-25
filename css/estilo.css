@@ -292,7 +292,7 @@ legend {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
-text-decoration: underline white solid 2px ;
+text-decoration: underline #F2F4F3 solid 2px ;
 
 }
 
@@ -337,3 +337,10 @@ textarea {
     animation-name: animacion;
     animation-duration: 3s;
 }
+
+
+.accordion-button:not(.collapsed) {
+    color: #F2F4F3 };
+
+strong { font-weight: unset;}
+b, strong { font-weight: unset;}
