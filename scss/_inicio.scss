@@ -1,0 +1,68 @@
+main {
+  background-image: url(../Img/Fondomain-prueba.png);
+  background-repeat: repeat;
+  background-size: 100%;
+
+}
+.mainDos {
+    background-image: url(../Img/Imagen-Inicio.jpg);
+  padding: 50px;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.elegirDanelo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  
+  .elegirLi {
+    display: grid;
+    font-family: 'Poppins', sans-serif;
+    color: #22333B;
+    font-size: 20px;
+  }
+  
+  .ubicaCion {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .acordeon {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  
+  .accordion-button {
+    position: unset;
+    background-image: linear-gradient(to right, $color-azul, $color-negro);
+    color: #F2F4F3;
+  }
+
+  .textoCentro {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  #logoDanelo {
+    animation-name: animacion;
+    animation-duration: 3s;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: $color-blanco;
+  }
+  
+  strong, b, strong {
+    font-weight: unset;
+  }

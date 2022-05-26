@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2? family= Poppins:wght@200 & display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+@import "variables";
+@import"inicio";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.menuPrincipal {
+  display: flex;
+  justify-content: center;
+}
+
+.headerLong {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  border-bottom: solid 2px $color-blanco;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  position: sticky;
+  top: 0px;
+  background-image: linear-gradient(to right, $color-azul, $color-negro);
+  height: 80px;
+  grid-area: header;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+}
+
+@media screen and (max-width: 703px) {
+  #redesS, .headerLong, .menuPrincipal {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 703px) {
+  .headerSmart {
+    display: none;
+  }
+}
+
+.headerColor {
+  background-image: linear-gradient(to right, $color-azul, $color-negro);
+  position: sticky;
+  top: 0px;
+}
+
+.navbar-toggler-icon {
+  background-image: url(../Img/navbar-icon.png);
+}
+
+.container-fluid {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  display: inline;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+li {
+  display: inline;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: $color-blanco;
+
+  &:hover {
+    text-decoration: underline solid $color-blanco 2px;
+    font-size: 16px;
+    color: $color-blanco;
+  }
+}
+
+.carruselFotos {
+  background-color: $color-marron;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: carruselfotos;
+}
+
+
+h1 {
+  text-decoration: dashed;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  color: $color-blanco;
+  font-size: 60px;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  color: $color-negro;
+  font-size: 40px;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  color: $color-blanco;
+  font-size: 20px;
+}
+
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: $color-blanco;
+}
+
+
+
+footer {
+  background-image: linear-gradient(to right, $color-azul, $color-negro);
+  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-top: solid $color-blanco 3px;
+  grid-area: footer;
+}
+
+.footerUno {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.footerDos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 575px) {
+  footer {
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footerDos {
+    margin-top: 20px;
+  }
+
+  h4 {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 636px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+
+iframe {
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 411px) {
+  iframe {
+    width: auto;
+    height: auto;
+  }
+}
+
+.imagenBanner {
+  width: 50%;
+
+  /*En esa seccion se va a poner un carrusel de imagenes, dejo esa a modo de ejemplo del espacio que se utilizara*/
+}
+
+
+
+.offcanvas {
+  background-image: linear-gradient(to bottom, $color-azul, $color-negro);
+}
+
+.nav-link {
+  color: $color-blanco;
+}
+
+
+
+#mainContacto {
+  background-image: linear-gradient(to bottom, $color-blanco, $color-azul);
+  padding: 3%;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border: 8px #F2F4F3 solid;
+}
+
+legend {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  text-decoration: underline #F2F4F3 solid 2px;
+}
+
+input {
+  margin-bottom: 20px;
+  border: 2px #22333B solid;
+}
+
+label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+#tituloForm {
+  font-family: 'Poppins', sans-serif;
+  color: $color-negro;
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.botonesContacto {
+  margin-top: 15px;
+}
+
+textarea {
+  border: black 2px solid;
+  width: 80%;
+  height: 200px;
+}
+
+@keyframes animacion {
+  0% {
+    opacity: 0%;
+  }
+
+  25% {
+    opacity: 25%;
+  }
+
+  50% {
+    opacity: 50%;
+  }
+
+  75% {
+    opacity: 75%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
