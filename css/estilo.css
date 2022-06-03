@@ -142,18 +142,16 @@ h1 {
 
 h2 {
   font-family: 'Poppins', sans-serif;
-  color: #0A0908;
-  font-size: 40px; }
+  font-size: 30px;
+  color: red; }
 
-h3 {
+h3, h4 {
   font-family: 'Poppins', sans-serif;
   color: #F2F4F3;
   font-size: 20px; }
 
 h4 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  color: #F2F4F3; }
+  font-size: 15px; }
 
 footer {
   background-image: linear-gradient(to right, #22333B, #0A0908);
@@ -166,14 +164,14 @@ footer {
 .footerUno {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: flex-start; }
+  align-items: flex-start;
+  justify-content: start; }
 
 .footerDos {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; }
+  align-items: flex-start;
+  justify-content: center; }
 
 @media screen and (max-width: 575px) {
   footer {

@@ -4,6 +4,9 @@
 
 @import "variables";
 @import"inicio";
+@import"maps";
+
+
 
 * {
   margin: 0;
@@ -109,8 +112,10 @@ h1 {
 
 h2 {
   font-family: 'Poppins', sans-serif;
-  color: $color-negro;
-  font-size: 40px;
+  //color: $color-negro;
+  //font-size: 40px;
+  font-size: map-get($titulos,tamfuente);
+  color: map-get($titulos,color);
 }
 
 h3 {
@@ -120,9 +125,11 @@ h3 {
 }
 
 h4 {
-  font-family: 'Poppins', sans-serif;
+
+//APLICO EXTEND
+@extend h3;
   font-size: 15px;
-  color: $color-blanco;
+
 }
 
 
@@ -137,17 +144,16 @@ footer {
 }
 
 .footerUno {
-  display: flex;
-  flex-direction: column;
+
+  //MIXIN
+@include footers;
   justify-content: start;
-  align-items: flex-start;
 }
 
 .footerDos {
-  display: flex;
-  flex-direction: column;
+  @include footers;
   justify-content: center;
-  align-items: flex-start;
+
 }
 
 @media screen and (max-width: 575px) {
