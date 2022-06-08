@@ -5,7 +5,9 @@
 @import "variables";
 @import"inicio";
 @import"maps";
-
+@import"productos";
+@import"multimedia";
+@import "favoritos";
 
 
 * {
@@ -34,6 +36,8 @@
   height: 80px;
   grid-area: header;
 }
+
+
 
 header {
   position: sticky;
@@ -112,10 +116,8 @@ h1 {
 
 h2 {
   font-family: 'Poppins', sans-serif;
-  //color: $color-negro;
-  //font-size: 40px;
-  font-size: map-get($titulos,tamfuente);
-  color: map-get($titulos,color);
+  color: $color-negro;
+  font-size: 40px;
 }
 
 h3 {
@@ -126,7 +128,7 @@ h3 {
 
 h4 {
 
-//APLICO EXTEND
+
 @extend h3;
   font-size: 15px;
 
@@ -145,13 +147,17 @@ footer {
 
 .footerUno {
 
-  //MIXIN
-@include footers;
+
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   justify-content: start;
 }
 
 .footerDos {
-  @include footers;
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   justify-content: center;
 
 }
@@ -212,7 +218,7 @@ iframe {
 
 
 #mainContacto {
-  background-image: linear-gradient(to bottom, $color-blanco, $color-azul);
+  background-color: $color-blanco;
   padding: 3%;
 }
 
@@ -283,3 +289,9 @@ textarea {
   }
 }
 
+.row { margin-left: 0%;
+  margin-right: 0%; }
+
+.carousel {
+    position: sticky;
+  }
