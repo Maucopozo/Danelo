@@ -76,10 +76,29 @@ strong, b, strong {
       .mainProductos .bg-light .btn-group .btn {
         position: unset; }
 
+.contenedoria {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  float: left; }
+
+.contenedoria img {
+  position: absolute;
+  left: 0;
+  transition: opacity 1.0s ease-in-out; }
+
+.contenedoria img.topia:hover {
+  opacity: 0; }
+
 .mainMultimedia {
   padding-top: 5%;
   padding-bottom: 5%;
   background-color: #F2F4F3; }
+  .mainMultimedia .imgmov:hover {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    filter: sepia(60%);
+    position: unset; }
 
 .favoritosUno {
   background-color: white;
