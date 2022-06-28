@@ -21,7 +21,11 @@ main {
   justify-content: start;
   align-items: center;
   margin-left: 20px;
-  margin-right: 20px; }
+  margin-right: 20px;
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.692);
+  border-top: #22333B solid 4px;
+  border-radius: 20px; }
 
 .elegirLi {
   display: grid;
@@ -29,11 +33,18 @@ main {
   color: #22333B;
   font-size: 20px; }
 
+.elegirLi:hover {
+  font-size: 25px;
+  color: #A9927D;
+  text-transform: uppercase; }
+
 .ubicaCion {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  animation-name: animacionmaps;
+  animation-duration: 3s; }
 
 .acordeon {
   margin-left: 20%;
@@ -45,8 +56,6 @@ main {
   color: #F2F4F3; }
 
 .textoCentro {
-  display: flex;
-  justify-content: center;
   margin-top: 30px; }
 
 #logoDanelo {
@@ -58,6 +67,62 @@ main {
 
 strong, b, strong {
   font-weight: unset; }
+
+#mainContacto {
+  background-image: none; }
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border: 3px, #F2F4F3, solid; }
+
+legend {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px; }
+
+input {
+  margin-bottom: 20px;
+  border: 2px #22333B solid; }
+
+label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px; }
+
+#tituloForm {
+  font-family: 'Poppins', sans-serif;
+  color: #0A0908;
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px; }
+
+.botonesContacto {
+  margin-top: 15px; }
+
+textarea {
+  border: black 2px solid;
+  width: 80%;
+  height: 200px; }
+
+.botoNes {
+  text-transform: uppercase;
+  padding: 6px;
+  background-color: white;
+  font-weight: bolder;
+  border: 2px #A9927D solid; }
+
+::placeholder {
+  font-size: 12px;
+  padding: 7px; }
+
+.alert-warning {
+  background-color: rgba(252, 89, 89, 0.521);
+  color: black;
+  border-color: red; }
 
 .card-img-top {
   background-image: url(../Img/fondo-productos.jpg);
@@ -76,22 +141,15 @@ strong, b, strong {
       .mainProductos .bg-light .btn-group .btn {
         position: unset; }
 
-.contenedoria {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  float: left; }
+.pColi {
+  font-weight: bolder !important;
+  color: #22333B !important; }
 
-.contenedoria img {
-  position: absolute;
-  left: 0;
-  transition: opacity 1.0s ease-in-out; }
-
-.contenedoria img.topia:hover {
-  opacity: 0; }
+.pCol {
+  color: #A9927D !important; }
 
 .mainMultimedia {
-  padding-top: 5%;
+  padding-top: 10px;
   padding-bottom: 5%;
   background-color: #F2F4F3; }
   .mainMultimedia .imgmov:hover {
@@ -100,9 +158,21 @@ strong, b, strong {
     filter: sepia(60%);
     position: unset; }
 
+.mainMulti {
+  background-color: #F2F4F3;
+  padding-top: 20px;
+  background-image: none; }
+
 .favoritosUno {
   background-color: white;
   padding-bottom: 100px; }
+
+.textZoom:hover {
+  font-size: 35px;
+  color: #A9927D; }
+
+.mainFav {
+  background-color: white; }
 
 * {
   margin: 0;
@@ -246,10 +316,6 @@ iframe {
     width: auto;
     height: auto; } }
 
-.imagenBanner {
-  width: 50%;
-  /*En esa seccion se va a poner un carrusel de imagenes, dejo esa a modo de ejemplo del espacio que se utilizara*/ }
-
 .offcanvas {
   background-image: linear-gradient(to bottom, #22333B, #0A0908); }
 
@@ -260,43 +326,12 @@ iframe {
   background-color: #F2F4F3;
   padding: 3%; }
 
-fieldset {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  border: 8px #F2F4F3 solid; }
+.row {
+  margin-left: 0%;
+  margin-right: 0%; }
 
-legend {
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  text-decoration: underline #F2F4F3 solid 2px; }
-
-input {
-  margin-bottom: 20px;
-  border: 2px #22333B solid; }
-
-label {
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px; }
-
-#tituloForm {
-  font-family: 'Poppins', sans-serif;
-  color: #0A0908;
-  font-size: 25px;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 10px; }
-
-.botonesContacto {
-  margin-top: 15px; }
-
-textarea {
-  border: black 2px solid;
-  width: 80%;
-  height: 200px; }
+.carousel {
+  position: sticky; }
 
 @keyframes animacion {
   0% {
@@ -310,9 +345,16 @@ textarea {
   100% {
     opacity: 100%; } }
 
-.row {
-  margin-left: 0%;
-  margin-right: 0%; }
-
-.carousel {
-  position: sticky; }
+@keyframes animacionmaps {
+  0% {
+    opacity: 0%;
+    transform: translate(-500px, 0px); }
+  25% {
+    opacity: 25%; }
+  50% {
+    opacity: 50%; }
+  75% {
+    opacity: 75%; }
+  100% {
+    opacity: 100%;
+    transform: translate(0px, 0px); } }

@@ -1,13 +1,19 @@
 .mainMultimedia {
-    padding-top: 5%;
+    padding-top: 10px;
     padding-bottom: 5%;
-    background-color: $color-blanco;
-
-.imgmov:hover {
--webkit-transform:scale(0.9);transform:scale(0.9);
-    filter: sepia(60%);
-    position: unset;
-    //VER QUE PASA CON LOS POSITION QUE SE SUPERPONEN CON EL HEADER CUANDO SE ACTIVA EL HOVER
+    background-color: $color-secundario;
+    
+    .imgmov:hover {
+        -webkit-transform:scale(0.9);transform:scale(0.9);
+        filter: sepia(60%);
+        position: unset;
+        
+    }
 }
+
+.mainMulti{
+    background-color: $color-secundario;
+    padding-top: 20px;
+background-image: none;
 }
 
